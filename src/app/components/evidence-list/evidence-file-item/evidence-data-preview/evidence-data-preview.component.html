@@ -27,7 +27,8 @@
       <ion-row class="table-content-row" *cdkVirtualFor="let evidenceData of filteredEvidence ">
         <ion-col size="2">{{evidenceData.id}}</ion-col>
         <ion-col size="3">{{evidenceData.fullName}}</ion-col>
-        <ion-col size="3">{{evidenceData.email}}</ion-col>
+        <ion-col size="3"><a class="mail-link" [href]="'mailto:' + evidenceData.email">{{evidenceData.email}}</a>
+        </ion-col>
         <ion-col size="2">{{evidenceData.updatedAt | date}}</ion-col>
         <ion-col size="2">
           <ion-icon *ngIf="evidenceData.mfaEnabled" name="checkmark-circle-outline" class="mfa-icon true"></ion-icon>

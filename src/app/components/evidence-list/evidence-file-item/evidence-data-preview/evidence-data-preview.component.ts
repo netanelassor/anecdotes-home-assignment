@@ -45,10 +45,10 @@ export class EvidenceDataPreviewComponent implements OnInit {
     else {
       this.filteredEvidence = [...this.evidenceDataList];
       this.filteredEvidence = this.filteredEvidence.filter(item => {
-        if (item.fullName.includes(searchText)) {
+        if (item.fullName.toLowerCase().includes(searchText)) {
           return true;
         }
-        else if (item.email.includes(searchText)) {
+        else if (item.email.toLowerCase().includes(searchText)) {
           return true;
         }
         else if (item.id.toString().includes(searchText)) {
