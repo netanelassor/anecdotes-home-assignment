@@ -38,6 +38,7 @@ export class EvidenceDataPreviewComponent implements OnInit {
   }
 
   search(searchText: string): void {
+    searchText = searchText.toLowerCase();
     if (!searchText || searchText === '') {
       this.filteredEvidence = [...this.evidenceDataList];
     }
