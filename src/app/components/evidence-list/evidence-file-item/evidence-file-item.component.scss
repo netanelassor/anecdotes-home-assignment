@@ -1,9 +1,10 @@
 .card {
   cursor: pointer;
   border: 1px solid transparent;
+  color: var(--text-color-primary);
 
   &:hover {
-    --background: darken(30%);
+    --background: var(--item-hover);
     border: 1px solid var(--form-color-table-hover-bg);
   }
 }

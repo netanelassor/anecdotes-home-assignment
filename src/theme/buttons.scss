@@ -16,3 +16,7 @@
     border: none;
   }
 }
+
+.btn-gradient-primary {
+  --background: linear-gradient(270deg, var(--btn-gradient-primary) 0%, var(--btn-gradient-secondary) 95.63%);
+}
