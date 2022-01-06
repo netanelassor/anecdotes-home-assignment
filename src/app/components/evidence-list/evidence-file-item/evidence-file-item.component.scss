@@ -1,0 +1,9 @@
+.card {
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover {
+    --background: darken(30%);
+    border: 1px solid var(--form-color-table-hover-bg);
+  }
+}

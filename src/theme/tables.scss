@@ -1,0 +1,23 @@
+.table-container {
+  padding: 16px;
+  height: 100%;
+
+  .table-header-row {
+    align-items: center;
+    height: 45px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--form-color-table-color-primary);
+  }
+
+  .table-content-row {
+    align-items: center;
+    height: 40px;
+    font-size: 14px;
+    border-top: 1px solid var(--bks-form-color-table-border);
+
+    &:first-child {
+      border-top: none;
+    }
+
+  }
+}

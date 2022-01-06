@@ -1,0 +1,12 @@
+<ng-container *ngIf="evidenceFile">
+  <ion-card class="card" (click)="openPreview(evidenceFile)">
+    <ion-card-content>
+      <ion-row>
+        <strong>{{evidenceFile.name}}</strong>
+      </ion-row>
+      <ion-row>
+        {{evidenceFile.lastModifiedDate | date}}
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ng-container>

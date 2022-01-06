@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-end">
+      <ion-col>
+        <input style="display: none" type="file" (change)="onFileUpload($event)" #fileInput>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" *ngFor="let evidenceFile of evidenceFileList$ | async">
+        <app-evidence-file-item [evidenceFile]="evidenceFile"></app-evidence-file-item>
+      </ion-col>
+    </ion-row>
+    <app-no-data *ngIf="(evidenceFileList$ | async).length === 0"></app-no-data>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="fileInput.click()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

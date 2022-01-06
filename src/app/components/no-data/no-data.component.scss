@@ -1,0 +1,36 @@
+.no-results {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+
+  .icon-wrapper {
+    img {
+      display: block;
+      width: 103px;
+      height: 76px;
+    }
+  }
+
+  .no-results-text-wrapper {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+    &.no-results-title {
+      font-size: 20px;
+      font-weight: normal;
+      display: block;
+    }
+
+    &.no-results-text-instruction {
+      font-size: 20px;
+      font-weight: normal;
+
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+.container {
+  padding: 16px;
+
+  .screen-header-container {
+    display: flex;
+    justify-content: end;
+  }
+
+
+}
+
+.evidence-list-container {
+  display: flex;
+  gap: 10px;
+
+  .evidence-file-list {
+    width: 50%;
+  }
+}

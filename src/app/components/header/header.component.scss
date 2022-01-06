@@ -1,0 +1,14 @@
+.menu-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  background-color: var(--header-bg-color);
+  height: 45px;
+
+
+
+  .logo-container {
+    padding: 10px;
+  }
+}

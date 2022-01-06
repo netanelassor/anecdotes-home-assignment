@@ -1,0 +1,37 @@
+[
+  {
+    "id": 12000,
+    "fullName": "anec dotes",
+    "email": "exercise@anecdotes.ai",
+    "updatedAt": "2021-07-26T09:41:56Z",
+    "mfaEnabled": true
+  },
+  {
+    "id": 12001,
+    "fullName": "anec dotes 2",
+    "email": "exercise@anecdotes.ai",
+    "updatedAt": "2021-07-26T09:41:56Z",
+    "mfaEnabled": true
+  },
+  {
+    "id": 12002,
+    "fullName": "anec dotes 3",
+    "email": "exercise@anecdotes.ai",
+    "updatedAt": "2021-07-26T09:41:56Z",
+    "mfaEnabled": true
+  },
+  {
+    "id": 12003,
+    "fullName": "anec dotes 4",
+    "email": "exercise@anecdotes.ai",
+    "updatedAt": "2021-07-26T09:41:56Z",
+    "mfaEnabled": true
+  },
+  {
+    "id": 12004,
+    "fullName": "anec dotes 4",
+    "email": "exercise@anecdotes.ai",
+    "updatedAt": "2021-07-26T09:41:56Z",
+    "mfaEnabled": true
+  }
+]

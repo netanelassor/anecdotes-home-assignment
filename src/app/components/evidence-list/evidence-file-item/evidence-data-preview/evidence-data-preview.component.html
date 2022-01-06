@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-grid class="modal-header">
+    <ion-row>
+      <ion-col class="vertical-middle ion-text-start">
+        <div>Evidence Data</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content class="content-container-with-virtual-scroll">
+  <ion-grid class="table-container" *ngIf="evidenceDataList">
+    <ion-row>
+      <form *ngIf="searchForm" [formGroup]="searchForm">
+        <ion-col> <input type="text" class="input-text-form" placeholder="Search" formControlName="searchInput" />
+        </ion-col>
+      </form>
+    </ion-row>
+    <ion-row class="table-header-row">
+      <ion-col size="2">ID</ion-col>
+      <ion-col size="3">Full Name</ion-col>
+      <ion-col size="3">Email</ion-col>
+      <ion-col size="2">Update at</ion-col>
+      <ion-col size="2">Mfa Enabled</ion-col>
+    </ion-row>
+    <cdk-virtual-scroll-viewport itemSize="45" *ngIf="filteredEvidence.length > 0">
+      <ion-row class="table-content-row" *cdkVirtualFor="let evidenceData of filteredEvidence ">
+        <ion-col size="2">{{evidenceData.id}}</ion-col>
+        <ion-col size="3">{{evidenceData.fullName}}</ion-col>
+        <ion-col size="3">{{evidenceData.email}}</ion-col>
+        <ion-col size="2">{{evidenceData.updatedAt | date}}</ion-col>
+        <ion-col size="2">
+          <ion-icon *ngIf="evidenceData.mfaEnabled" name="checkmark-circle-outline" class="mfa-icon true"></ion-icon>
+          <ion-icon *ngIf="!evidenceData.mfaEnabled" name="close-circle-outline" class="mfa-icon false"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </cdk-virtual-scroll-viewport>
+
+    <app-no-data *ngIf="filteredEvidence.length === 0"></app-no-data>
+
+  </ion-grid>
+
+</ion-content>
+<ion-footer class="ion-text-end">
+  <ion-button actionOptions class="btn-general btn-primary" (click)="closeModal()">
+    close
+  </ion-button>
+</ion-footer>
